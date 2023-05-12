@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api_versioning_demo.Controllers
 {
-    [Route("api/user")]
     [ApiController]
+    [ApiVersion("1.0")]
+    [Route("api/user")]
     public class UserV1Controller : ControllerBase
     {
         [HttpGet]
