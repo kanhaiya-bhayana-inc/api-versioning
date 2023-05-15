@@ -3,15 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api_versioning_demo.Controllers
 {
-    [ApiController]
     [ApiVersion("2.0")]
+    //[Route("api/{v:apiVersion}/user")]
     [Route("api/user")]
+    [ApiController]
     public class UserV2Controller : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("us-currency")]
         public IActionResult Get()
         {
-            return Ok("User from V2 controller.");
+            return Ok("Your currency will be in $s.");
         }
     }
 }

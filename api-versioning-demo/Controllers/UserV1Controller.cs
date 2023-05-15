@@ -3,15 +3,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api_versioning_demo.Controllers
 {
-    [ApiController]
     [ApiVersion("1.0")]
+    //[Route("api/{v:apiVersion}/user")]
     [Route("api/user")]
+    [ApiController]
     public class UserV1Controller : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("in-currency")]
         public IActionResult Get()
         {
-            return Ok("User from V1 controller");
+            return Ok("Your currency will be in Rs.");
+        }
+
+        [HttpGet("sign-up")]
+        public IActionResult SignUp(int id)
+        {
+            return Ok($"Sign Up Sucessfully with the id {id}");
         }
     }
 }
