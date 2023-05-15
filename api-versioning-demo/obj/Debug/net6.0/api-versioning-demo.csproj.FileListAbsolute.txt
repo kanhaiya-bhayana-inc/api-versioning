@@ -31,3 +31,4 @@ C:\Users\kanhaiya.bhayana\source\repos\C#\api-versioning-demo\api-versioning-dem
 C:\Users\kanhaiya.bhayana\source\repos\C#\api-versioning-demo\api-versioning-demo\obj\Debug\net6.0\api-versioning-demo.pdb
 C:\Users\kanhaiya.bhayana\source\repos\C#\api-versioning-demo\api-versioning-demo\obj\Debug\net6.0\api-versioning-demo.genruntimeconfig.cache
 C:\Users\kanhaiya.bhayana\source\repos\C#\api-versioning-demo\api-versioning-demo\obj\Debug\net6.0\ref\api-versioning-demo.dll
+C:\Users\kanhaiya.bhayana\source\repos\C#\api-versioning-demo\api-versioning-demo\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
