@@ -1,3 +1,4 @@
+using api_versioning_demo.Middlewares;
 using api_versioning_demo.Options;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -5,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 
@@ -34,7 +37,27 @@ builder.Services.AddVersionedApiExplorer(setup =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware();
+app.UseCutom2Middleware();
 
+/*// Middleware - A
+app.Use(async(context,next) =>{
+    await context.Response.WriteAsync("Middleware A (before)\n");
+    await next();
+    await context.Response.WriteAsync("Middleware A (after)\n");
+});
+
+// Middleware - B
+app.Use(async (context, next) => {
+    await context.Response.WriteAsync("Middleware B (before)\n");
+    await next();
+    await context.Response.WriteAsync("Middleware B (after)\n");
+});*/
+
+// Middleware - C
+app.Run(async context => {
+    await context.Response.WriteAsync("Middleware C (executed)\n");
+});
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
