@@ -38,7 +38,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware();
-app.UseCutom2Middleware();
+app.UseCustom2Middleware();
 
 /*// Middleware - A
 app.Use(async(context,next) =>{
